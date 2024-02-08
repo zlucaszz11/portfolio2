@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+:root {
+    --cor-principal: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+    --font-principal: "Krona One", sans-serif;
+    --font-secundaria: "Montserrat", sans-serif;
+}
+* {
+    margin: 0; /*reset css*/
+    padding: 0;
+}
+
+body {
+    /*height: 100vh;*/ /*100% do viewport(da nossa tela)*/
+    box-sizing: border-box; /* filho n vai sair do pai(main), vai adaptar as coisa, encolher*/
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+}
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link {
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+.titulo-destaque {
+    color: var(--cor-terciaria); /* usando classes*/
+}
+.apresentacao {
+    padding: 8% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+.apresentacao__conteudo {
+    width: 50%;
+    /*height: 400px;*/
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /*justify-content: space-between;*/ /*nao faz sentido pois estao em coluna e nao em row*/
+}
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--font-principal);
+}
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);
+}
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.apresentacao__links__subtitulo {
+    font-family: var(--font-principal);
+    font-weight: 400px;
+    font: 24px;
+}
+.apresentacao__links__navegacao {
+    /* background-color: #22D4FD; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%; /*porcentagens sao relativas a tag pai, nao tira do nada*/
+    padding: 21.5px 0px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+}
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover);
+}
+.apresentacao__imagem {
+    width: 50%;
+}
+.rodape {
+    padding: 24px;
+    color: var(--cor-principal);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400px;
+}
+@media (max-width: 1200px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
